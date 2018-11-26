@@ -1,0 +1,609 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Command Line &#8212; Python  documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Home" href="../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Docky</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="http://www.akretion.com">Done by Akretion</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Doc <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#docky">docky</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docky-build">docky build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docky-down">docky down</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docky-kill">docky kill</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docky-logs">docky logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docky-migrate">docky migrate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docky-open">docky open</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docky-proxy">docky proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docky-proxy-kill">docky proxy kill</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docky-proxy-ps">docky proxy ps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docky-proxy-restart">docky proxy restart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docky-proxy-start">docky proxy start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docky-proxy-stop">docky proxy stop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docky-ps">docky ps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docky-pull">docky pull</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docky-restart">docky restart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docky-run">docky run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docky-up">docky up</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/auto/cmd.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="command-line">
+<h1>Command Line<a class="headerlink" href="#command-line" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="docky">
+<h2>docky<a class="headerlink" href="#docky" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Usage:</dt>
+<dd>docky [SWITCHES] [SUBCOMMAND [SWITCHES]] args…</dd>
+<dt>Meta-switches:</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></td>
+<td>Prints this help message and quits</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">--help-all</span></kbd></td>
+<td>Prints help messages of all sub-commands and quits</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-v</span>, <span class="option">--version</span></kbd></td>
+<td>Prints the program’s version and quits</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">--verbose</span></kbd></td>
+<td>Verbose mode</td></tr>
+</tbody>
+</table>
+</dd>
+<dt>Switches:</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-e</span>, <span class="option">--env <var>VALUE</var></span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Environment flag</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="79%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Sub-commands:</th>
+<th class="head">&#160;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>build</td>
+<td>Build or rebuild services</td>
+</tr>
+<tr class="row-odd"><td>down</td>
+<td>Stop all services</td>
+</tr>
+<tr class="row-even"><td>kill</td>
+<td>Kill all running container of the project</td>
+</tr>
+<tr class="row-odd"><td>logs</td>
+<td>View output from containers</td>
+</tr>
+<tr class="row-even"><td>migrate</td>
+<td>TODO Migrate your odoo project</td>
+</tr>
+<tr class="row-odd"><td>open</td>
+<td>Open a new session inside your dev container</td>
+</tr>
+<tr class="row-even"><td>proxy</td>
+<td>Start/Restart/Stop your docky proxy</td>
+</tr>
+<tr class="row-odd"><td>ps</td>
+<td>List containers</td>
+</tr>
+<tr class="row-even"><td>pull</td>
+<td>Pulls service images</td>
+</tr>
+<tr class="row-odd"><td>restart</td>
+<td>Restart service</td>
+</tr>
+<tr class="row-even"><td>run</td>
+<td>Start services and enter in your dev container</td>
+</tr>
+<tr class="row-odd"><td>up</td>
+<td>Start all services in detached mode</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="docky-build">
+<h2>docky build<a class="headerlink" href="#docky-build" title="Permalink to this headline">¶</a></h2>
+<p>Build or rebuild services</p>
+<dl class="docutils">
+<dt>Usage:</dt>
+<dd>docky build [SWITCHES] args…</dd>
+<dt>Hidden-switches:</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></td>
+<td>Prints this help message and quits</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+<div class="section" id="docky-down">
+<h2>docky down<a class="headerlink" href="#docky-down" title="Permalink to this headline">¶</a></h2>
+<p>Stop all services</p>
+<dl class="docutils">
+<dt>Usage:</dt>
+<dd>docky down [SWITCHES] args…</dd>
+<dt>Hidden-switches:</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></td>
+<td>Prints this help message and quits</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+<div class="section" id="docky-kill">
+<h2>docky kill<a class="headerlink" href="#docky-kill" title="Permalink to this headline">¶</a></h2>
+<p>Kill all running container of the project</p>
+<dl class="docutils">
+<dt>Usage:</dt>
+<dd>docky kill [SWITCHES] args…</dd>
+<dt>Hidden-switches:</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></td>
+<td>Prints this help message and quits</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+<div class="section" id="docky-logs">
+<h2>docky logs<a class="headerlink" href="#docky-logs" title="Permalink to this headline">¶</a></h2>
+<p>View output from containers</p>
+<dl class="docutils">
+<dt>Usage:</dt>
+<dd>docky logs [SWITCHES] args…</dd>
+<dt>Hidden-switches:</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></td>
+<td>Prints this help message and quits</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+<div class="section" id="docky-migrate">
+<h2>docky migrate<a class="headerlink" href="#docky-migrate" title="Permalink to this headline">¶</a></h2>
+<p>TODO Migrate your odoo project</p>
+<dl class="docutils">
+<dt>Usage:</dt>
+<dd>docky migrate [SWITCHES] args…</dd>
+<dt>Hidden-switches:</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></td>
+<td>Prints this help message and quits</td></tr>
+</tbody>
+</table>
+</dd>
+<dt>Switches:</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-b</span>, <span class="option">--branch <var>VALUE</var></span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Branch to apply split by comma ex: 7.0,8.0;
+required</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--db-file <var>VALUE</var></span></kbd></td>
+</tr>
+<tr><td>&#160;</td><td>Sets an attribute</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+<div class="section" id="docky-open">
+<h2>docky open<a class="headerlink" href="#docky-open" title="Permalink to this headline">¶</a></h2>
+<p>Open a new session inside your dev container</p>
+<dl class="docutils">
+<dt>Usage:</dt>
+<dd>docky open [SWITCHES] args…</dd>
+<dt>Hidden-switches:</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></td>
+<td>Prints this help message and quits</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">--root</span></kbd></td>
+<td>Run or open as root</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+<div class="section" id="docky-proxy">
+<h2>docky proxy<a class="headerlink" href="#docky-proxy" title="Permalink to this headline">¶</a></h2>
+<p>Start/Restart/Stop your docky proxy</p>
+<dl class="docutils">
+<dt>Usage:</dt>
+<dd>docky proxy [SWITCHES] [SUBCOMMAND [SWITCHES]] args…</dd>
+<dt>Hidden-switches:</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></td>
+<td>Prints this help message and quits</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">--help-all</span></kbd></td>
+<td>Prints help messages of all sub-commands and quits</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-v</span>, <span class="option">--version</span></kbd></td>
+<td>Prints the program’s version and quits</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Sub-commands:</th>
+<th class="head">&#160;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>kill</td>
+<td>Kill your docky proxy; see ‘docky proxy kill –help’ for
+more info</td>
+</tr>
+<tr class="row-odd"><td>ps</td>
+<td>Get the status of your docky proxy; see ‘docky proxy ps
+–help’ for more info</td>
+</tr>
+<tr class="row-even"><td>restart</td>
+<td>Restart your docky proxy; see ‘docky proxy restart
+–help’ for more info</td>
+</tr>
+<tr class="row-odd"><td>start</td>
+<td>Start your docky proxy; see ‘docky proxy start –help’
+for more info</td>
+</tr>
+<tr class="row-even"><td>stop</td>
+<td>Stop your docky proxy; see ‘docky proxy stop –help’ for
+more info</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="docky-proxy-kill">
+<h2>docky proxy kill<a class="headerlink" href="#docky-proxy-kill" title="Permalink to this headline">¶</a></h2>
+<p>Kill your docky proxy</p>
+<dl class="docutils">
+<dt>Usage:</dt>
+<dd>docky proxy kill [SWITCHES] args…</dd>
+<dt>Hidden-switches:</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></td>
+<td>Prints this help message and quits</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+<div class="section" id="docky-proxy-ps">
+<h2>docky proxy ps<a class="headerlink" href="#docky-proxy-ps" title="Permalink to this headline">¶</a></h2>
+<p>Get the status of your docky proxy</p>
+<dl class="docutils">
+<dt>Usage:</dt>
+<dd>docky proxy ps [SWITCHES] args…</dd>
+<dt>Hidden-switches:</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></td>
+<td>Prints this help message and quits</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+<div class="section" id="docky-proxy-restart">
+<h2>docky proxy restart<a class="headerlink" href="#docky-proxy-restart" title="Permalink to this headline">¶</a></h2>
+<p>Restart your docky proxy</p>
+<dl class="docutils">
+<dt>Usage:</dt>
+<dd>docky proxy restart [SWITCHES] args…</dd>
+<dt>Hidden-switches:</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></td>
+<td>Prints this help message and quits</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+<div class="section" id="docky-proxy-start">
+<h2>docky proxy start<a class="headerlink" href="#docky-proxy-start" title="Permalink to this headline">¶</a></h2>
+<p>Start your docky proxy</p>
+<dl class="docutils">
+<dt>Usage:</dt>
+<dd>docky proxy start [SWITCHES] args…</dd>
+<dt>Hidden-switches:</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></td>
+<td>Prints this help message and quits</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+<div class="section" id="docky-proxy-stop">
+<h2>docky proxy stop<a class="headerlink" href="#docky-proxy-stop" title="Permalink to this headline">¶</a></h2>
+<p>Stop your docky proxy</p>
+<dl class="docutils">
+<dt>Usage:</dt>
+<dd>docky proxy stop [SWITCHES] args…</dd>
+<dt>Hidden-switches:</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></td>
+<td>Prints this help message and quits</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+<div class="section" id="docky-ps">
+<h2>docky ps<a class="headerlink" href="#docky-ps" title="Permalink to this headline">¶</a></h2>
+<p>List containers</p>
+<dl class="docutils">
+<dt>Usage:</dt>
+<dd>docky ps [SWITCHES] args…</dd>
+<dt>Hidden-switches:</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></td>
+<td>Prints this help message and quits</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+<div class="section" id="docky-pull">
+<h2>docky pull<a class="headerlink" href="#docky-pull" title="Permalink to this headline">¶</a></h2>
+<p>Pulls service images</p>
+<dl class="docutils">
+<dt>Usage:</dt>
+<dd>docky pull [SWITCHES] args…</dd>
+<dt>Hidden-switches:</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></td>
+<td>Prints this help message and quits</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+<div class="section" id="docky-restart">
+<h2>docky restart<a class="headerlink" href="#docky-restart" title="Permalink to this headline">¶</a></h2>
+<p>Restart service</p>
+<dl class="docutils">
+<dt>Usage:</dt>
+<dd>docky restart [SWITCHES] args…</dd>
+<dt>Hidden-switches:</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></td>
+<td>Prints this help message and quits</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+<div class="section" id="docky-run">
+<h2>docky run<a class="headerlink" href="#docky-run" title="Permalink to this headline">¶</a></h2>
+<p>Start services and enter in your dev container</p>
+<dl class="docutils">
+<dt>Usage:</dt>
+<dd>docky run [SWITCHES] args…</dd>
+<dt>Hidden-switches:</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></td>
+<td>Prints this help message and quits</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">--root</span></kbd></td>
+<td>Run or open as root</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+<div class="section" id="docky-up">
+<h2>docky up<a class="headerlink" href="#docky-up" title="Permalink to this headline">¶</a></h2>
+<p>Start all services in detached mode</p>
+<dl class="docutils">
+<dt>Usage:</dt>
+<dd>docky up [SWITCHES] args…</dd>
+<dt>Hidden-switches:</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></td>
+<td>Prints this help message and quits</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright Akretion.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

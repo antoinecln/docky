@@ -1,0 +1,276 @@
+Command Line
+=========================
+
+docky
+-----
+
+Usage:
+    docky [SWITCHES] [SUBCOMMAND [SWITCHES]] args...
+
+Meta-switches:
+    -h, --help               Prints this help message and quits
+    --help-all               Prints help messages of all sub-commands and quits
+    -v, --version            Prints the program's version and quits
+    --verbose                Verbose mode
+
+Switches:
+    -e, --env VALUE      Environment flag
+
+==============         ==========
+Sub-commands:
+==============         ==========
+    build                    Build or rebuild services
+    down                     Stop all services
+    kill                     Kill all running container of the project
+    logs                     View output from containers
+    migrate                  TODO Migrate your odoo project
+    open                     Open a new session inside your dev container
+    proxy                    Start/Restart/Stop your docky proxy
+    ps                       List containers
+    pull                     Pulls service images
+    restart                  Restart service
+    run                      Start services and enter in your dev container
+    up                       Start all services in detached mode
+==============         ==========
+
+docky build
+-----------
+
+Build or rebuild services
+
+Usage:
+    docky build [SWITCHES] args...
+
+Hidden-switches:
+    -h, --help      Prints this help message and quits
+
+
+
+docky down
+----------
+
+Stop all services
+
+Usage:
+    docky down [SWITCHES] args...
+
+Hidden-switches:
+    -h, --help      Prints this help message and quits
+
+
+
+docky kill
+----------
+
+Kill all running container of the project
+
+Usage:
+    docky kill [SWITCHES] args...
+
+Hidden-switches:
+    -h, --help      Prints this help message and quits
+
+
+
+docky logs
+----------
+
+View output from containers
+
+Usage:
+    docky logs [SWITCHES] args...
+
+Hidden-switches:
+    -h, --help      Prints this help message and quits
+
+
+
+docky migrate
+-------------
+
+TODO Migrate your odoo project
+
+Usage:
+    docky migrate [SWITCHES] args...
+
+Hidden-switches:
+    -h, --help                  Prints this help message and quits
+
+Switches:
+    -b, --branch VALUE      Branch to apply split by comma ex: 7.0,8.0;
+                                required
+    --db-file VALUE         Sets an attribute
+
+
+
+docky open
+----------
+
+Open a new session inside your dev container
+
+Usage:
+    docky open [SWITCHES] args...
+
+Hidden-switches:
+    -h, --help      Prints this help message and quits
+    --root          Run or open as root
+
+
+
+docky proxy
+-----------
+
+Start/Restart/Stop your docky proxy
+
+Usage:
+    docky proxy [SWITCHES] [SUBCOMMAND [SWITCHES]] args...
+
+Hidden-switches:
+    -h, --help         Prints this help message and quits
+    --help-all         Prints help messages of all sub-commands and quits
+    -v, --version      Prints the program's version and quits
+
+==============         ==========
+Sub-commands:
+==============         ==========
+    kill               Kill your docky proxy; see 'docky proxy kill --help' for
+                       more info
+    ps                 Get the status of your docky proxy; see 'docky proxy ps
+                       --help' for more info
+    restart            Restart your docky proxy; see 'docky proxy restart
+                       --help' for more info
+    start              Start your docky proxy; see 'docky proxy start --help'
+                       for more info
+    stop               Stop your docky proxy; see 'docky proxy stop --help' for
+                       more info
+==============         ==========
+
+docky proxy kill
+----------------
+
+Kill your docky proxy
+
+Usage:
+    docky proxy kill [SWITCHES] args...
+
+Hidden-switches:
+    -h, --help      Prints this help message and quits
+
+
+
+docky proxy ps
+--------------
+
+Get the status of your docky proxy
+
+Usage:
+    docky proxy ps [SWITCHES] args...
+
+Hidden-switches:
+    -h, --help      Prints this help message and quits
+
+
+
+docky proxy restart
+-------------------
+
+Restart your docky proxy
+
+Usage:
+    docky proxy restart [SWITCHES] args...
+
+Hidden-switches:
+    -h, --help      Prints this help message and quits
+
+
+
+docky proxy start
+-----------------
+
+Start your docky proxy
+
+Usage:
+    docky proxy start [SWITCHES] args...
+
+Hidden-switches:
+    -h, --help      Prints this help message and quits
+
+
+
+docky proxy stop
+----------------
+
+Stop your docky proxy
+
+Usage:
+    docky proxy stop [SWITCHES] args...
+
+Hidden-switches:
+    -h, --help      Prints this help message and quits
+
+
+
+docky ps
+--------
+
+List containers
+
+Usage:
+    docky ps [SWITCHES] args...
+
+Hidden-switches:
+    -h, --help      Prints this help message and quits
+
+
+
+docky pull
+----------
+
+Pulls service images
+
+Usage:
+    docky pull [SWITCHES] args...
+
+Hidden-switches:
+    -h, --help      Prints this help message and quits
+
+
+
+docky restart
+-------------
+
+Restart service
+
+Usage:
+    docky restart [SWITCHES] args...
+
+Hidden-switches:
+    -h, --help      Prints this help message and quits
+
+
+
+docky run
+---------
+
+Start services and enter in your dev container
+
+Usage:
+    docky run [SWITCHES] args...
+
+Hidden-switches:
+    -h, --help      Prints this help message and quits
+    --root          Run or open as root
+
+
+
+docky up
+--------
+
+Start all services in detached mode
+
+Usage:
+    docky up [SWITCHES] args...
+
+Hidden-switches:
+    -h, --help      Prints this help message and quits
+
